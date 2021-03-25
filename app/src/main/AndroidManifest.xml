@@ -8,7 +8,12 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.DrugDosageCalculator">
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity android:name=".unit_conversion"></activity>
+        <activity android:name=".iv_volume_drop_rate" />
+        <activity android:name=".iv_volume_rate" />
+        <activity android:name=".volume_of_liquid" />
+        <activity android:name=".number_of_tablets" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
