@@ -18,7 +18,7 @@ public class volume_of_liquid extends AppCompatActivity {
     Spinner unitRD,SS,SV;
     EditText rd,ss,sv;
     TextView dd,errorRD,tv1,tv2,tv3,errorSS,errorSV;
-    Button calculate;
+    Button calculate,reset_btn;
     float result = 0;
 
     @Override
@@ -45,8 +45,11 @@ public class volume_of_liquid extends AppCompatActivity {
         dd = findViewById(R.id.desiredDosage);
         sv = findViewById(R.id.stockVolume);
         calculate = findViewById(R.id.calculate);
+        reset_btn = findViewById(R.id.reset_btn);
 
         errorRD = findViewById(R.id.requiredDosage_error);
+        errorSS = findViewById(R.id.stockStrength_error);
+        errorSV = findViewById(R.id.stockVolume_error);
         tv1 = findViewById(R.id.textView3);
         tv2 = findViewById(R.id.textView4);
         tv3 = findViewById(R.id.textView6);
@@ -62,7 +65,6 @@ public class volume_of_liquid extends AppCompatActivity {
                 final String unitss = SS.getSelectedItem().toString().trim();
 
                 if(rdosage.isEmpty()){
-                    tv1.setVisibility(View.INVISIBLE);
                     errorRD.setVisibility(View.VISIBLE);
                     errorRD.startAnimation(animShake);
                     result = 0;
@@ -70,7 +72,6 @@ public class volume_of_liquid extends AppCompatActivity {
                 }
 
                 if(ssdosage.isEmpty()){
-                    tv2.setVisibility(View.INVISIBLE);
                     errorSS.setVisibility(View.VISIBLE);
                     errorSS.startAnimation(animShake);
                     result = 0;
@@ -78,7 +79,6 @@ public class volume_of_liquid extends AppCompatActivity {
                 }
 
                 if(svolume.isEmpty()){
-                    tv3.setVisibility(View.INVISIBLE);
                     errorSV.setVisibility(View.VISIBLE);
                     errorSV.startAnimation(animShake);
                     result = 0;
@@ -121,9 +121,6 @@ public class volume_of_liquid extends AppCompatActivity {
                 dd.setText(result + " ml");
 
                 if(result != 0){
-                    tv1.setVisibility(View.VISIBLE);
-                    tv2.setVisibility(View.VISIBLE);
-                    tv3.setVisibility(View.VISIBLE);
                     errorRD.setVisibility(View.INVISIBLE);
                     errorSS.setVisibility(View.INVISIBLE);
                     errorSV.setVisibility(View.INVISIBLE);
@@ -131,6 +128,23 @@ public class volume_of_liquid extends AppCompatActivity {
 
             }
         });
+
+        reset_btn.setOnClickListener((new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(!rd.getText().toString().isEmpty() || !ss.getText().toString().isEmpty() || !sv.getText().toString().isEmpty()){
+                    rd.setText("");
+                    ss.setText("");
+                    sv.setText("");
+                    dd.setText("");
+                    Toast.makeText(volume_of_liquid.this, "All Cells are Reset", Toast.LENGTH_SHORT).show();
+                }
+
+                else{
+                    Toast.makeText(volume_of_liquid.this, "Nothing To Clear", Toast.LENGTH_SHORT).show();
+                }
+            }
+        }));
 
     }
 }

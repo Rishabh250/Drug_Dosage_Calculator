@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_gravity="center"
+    android:layout_gravity="center_vertical"
     tools:context=".volume_of_liquid">
 
     <TextView
@@ -18,25 +18,28 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.041" />
+        app:layout_constraintVertical_bias="0.021" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
-        android:layout_width="match_parent"
-        android:layout_height="622dp"
-        android:layout_marginTop="-90dp"
-        android:padding="20dp"
+        android:layout_width="397dp"
+        android:layout_height="592dp"
+        android:padding="10dp"
         app:cardCornerRadius="40dp"
+        android:layout_marginTop="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2">
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.015">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
 
             <TextView
                 android:id="@+id/textView3"
@@ -44,14 +47,14 @@
                 android:layout_height="wrap_content"
                 android:text="Required Dosage "
                 android:textColor="@color/black"
-                android:textSize="30dp"
+                android:textSize="25dp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.141"
+                app:layout_constraintHorizontal_bias="0.075"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.071" />
+                app:layout_constraintVertical_bias="0.112" />
 
             <TextView
                 android:id="@+id/textView4"
@@ -59,14 +62,14 @@
                 android:layout_height="wrap_content"
                 android:text="Stock Strength "
                 android:textColor="@color/black"
-                android:textSize="30dp"
+                android:textSize="25dp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.112"
+                app:layout_constraintHorizontal_bias="0.067"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/requiredDosage"
-                app:layout_constraintVertical_bias="0.086" />
+                app:layout_constraintTop_toBottomOf="@+id/textView3"
+                app:layout_constraintVertical_bias="0.161" />
 
             <TextView
                 android:id="@+id/textView6"
@@ -74,30 +77,29 @@
                 android:layout_height="wrap_content"
                 android:text="Stock Volume"
                 android:textColor="@color/black"
-                android:textSize="30dp"
+                android:textSize="25dp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.091"
+                app:layout_constraintHorizontal_bias="0.062"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/stockStrength"
-                app:layout_constraintVertical_bias="0.125" />
-
+                app:layout_constraintTop_toBottomOf="@+id/textView4"
+                app:layout_constraintVertical_bias="0.206" />
 
             <TextView
                 android:id="@+id/textView5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Desired Volume "
+                android:text="Desired Volume : "
                 android:textColor="@color/black"
-                android:textSize="30dp"
+                android:textSize="25dp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.122"
+                app:layout_constraintHorizontal_bias="0.132"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/calculate"
-                app:layout_constraintVertical_bias="0.185" />
+                app:layout_constraintVertical_bias="0.166" />
 
             <TextView
                 android:id="@+id/desiredDosage"
@@ -115,72 +117,120 @@
 
             <EditText
                 android:id="@+id/requiredDosage"
-                android:layout_width="102dp"
-                android:layout_height="47dp"
+                android:layout_width="127dp"
+                android:layout_height="50dp"
+                android:background="@drawable/edit_box_selector"
                 android:inputType="numberDecimal"
+                android:padding="10dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.079"
+                app:layout_constraintHorizontal_bias="0.888"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView3"
-                app:layout_constraintVertical_bias="0.0" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.083" />
+
+            <TextView
+                android:id="@+id/requiredDosage_error"
+                android:layout_width="127dp"
+                android:layout_height="50dp"
+                android:background="@drawable/edit_box_error"
+                android:padding="10dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.888"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.083" />
 
             <EditText
                 android:id="@+id/stockStrength"
-                android:layout_width="102dp"
-                android:layout_height="47dp"
+                android:layout_width="127dp"
+                android:layout_height="50dp"
+                android:background="@drawable/edit_box_selector"
                 android:inputType="numberDecimal"
+                android:padding="10dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.08"
+                app:layout_constraintHorizontal_bias="0.89"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView4"
-                app:layout_constraintVertical_bias="0.0" />
+                app:layout_constraintTop_toBottomOf="@+id/tablets_unit"
+                app:layout_constraintVertical_bias="0.049" />
+
+            <TextView
+                android:id="@+id/stockStrength_error"
+                android:layout_width="127dp"
+                android:layout_height="50dp"
+                android:background="@drawable/edit_box_error"
+                android:padding="10dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.89"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tablets_unit"
+                app:layout_constraintVertical_bias="0.049" />
 
             <EditText
                 android:id="@+id/stockVolume"
-                android:layout_width="102dp"
-                android:layout_height="47dp"
+                android:layout_width="127dp"
+                android:layout_height="50dp"
+                android:background="@drawable/edit_box_selector"
                 android:inputType="numberDecimal"
+                android:padding="10dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.069"
+                app:layout_constraintHorizontal_bias="0.89"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView4"
-                app:layout_constraintVertical_bias="0.339" />
+                app:layout_constraintTop_toBottomOf="@+id/tablets_unit2"
+                app:layout_constraintVertical_bias="0.062" />
+
+            <TextView
+                android:id="@+id/stockVolume_error"
+                android:layout_width="127dp"
+                android:layout_height="50dp"
+                android:background="@drawable/edit_box_error"
+                android:padding="10dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.89"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tablets_unit2"
+                app:layout_constraintVertical_bias="0.062" />
 
             <Spinner
                 android:id="@+id/tablets_unit"
-                android:layout_width="149dp"
-                android:layout_height="40dp"
+                android:layout_width="142dp"
+                android:layout_height="44dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.582"
+                app:layout_constraintHorizontal_bias="0.94"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView3"
-                app:layout_constraintVertical_bias="0.013" />
+                app:layout_constraintTop_toBottomOf="@+id/requiredDosage"
+                app:layout_constraintVertical_bias="0.0" />
 
             <Spinner
                 android:id="@+id/tablets_unit2"
-                android:layout_width="149dp"
-                android:layout_height="42dp"
+                android:layout_width="142dp"
+                android:layout_height="44dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.582"
+                app:layout_constraintHorizontal_bias="0.94"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView4"
-                app:layout_constraintVertical_bias="0.012" />
+                app:layout_constraintTop_toBottomOf="@+id/stockStrength"
+                app:layout_constraintVertical_bias="0.0" />
 
             <Spinner
                 android:id="@+id/tablets_unit3"
-                android:layout_width="149dp"
-                android:layout_height="42dp"
+                android:layout_width="142dp"
+                android:layout_height="44dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.577"
+                app:layout_constraintHorizontal_bias="0.94"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView6"
-                app:layout_constraintVertical_bias="0.019" />
+                app:layout_constraintTop_toBottomOf="@+id/stockVolume"
+                app:layout_constraintVertical_bias="0.0" />
 
             <Button
                 android:id="@+id/calculate"
@@ -189,14 +239,24 @@
                 android:text="Calculate"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.502"
+                app:layout_constraintHorizontal_bias="0.627"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView6"
-                app:layout_constraintVertical_bias="0.333" />
+                app:layout_constraintVertical_bias="0.23" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
+
     </androidx.cardview.widget.CardView>
 
+    <Button
+        android:id="@+id/reset_btn"
+        android:layout_width="138dp"
+        android:layout_height="51dp"
+        android:text="Reset"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

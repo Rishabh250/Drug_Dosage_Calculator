@@ -120,7 +120,7 @@ public class number_of_tablets extends AppCompatActivity {
         reset_btn.setOnClickListener((new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(!rd.getText().toString().isEmpty()&& !ss.getText().toString().isEmpty()){
+                if(!rd.getText().toString().isEmpty() || !ss.getText().toString().isEmpty()){
                     rd.setText("");
                     ss.setText("");
                     dd.setText("");

@@ -101,15 +101,16 @@
                 android:id="@+id/requiredDosage"
                 android:layout_width="127dp"
                 android:layout_height="50dp"
-                android:inputType="numberDecimal"
                 android:background="@drawable/edit_box_selector"
+                android:inputType="numberDecimal"
                 android:padding="10dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.874"
+                app:layout_constraintHorizontal_bias="0.876"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.067" />
+                app:layout_constraintVertical_bias="0.066" />
+
 
             <TextView
                 android:id="@+id/requiredDosage_error"
@@ -157,7 +158,6 @@
                 android:id="@+id/tablets_unit"
                 android:layout_width="142dp"
                 android:layout_height="44dp"
-
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.925"
