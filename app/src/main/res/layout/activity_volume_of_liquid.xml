@@ -24,8 +24,8 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
-        android:layout_width="362dp"
-        android:layout_height="640dp"
+        android:layout_width="match_parent"
+        android:layout_height="622dp"
         android:layout_marginTop="-90dp"
         android:padding="20dp"
         app:cardCornerRadius="40dp"
@@ -42,7 +42,7 @@
                 android:id="@+id/textView3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Desired Dosage "
+                android:text="Required Dosage "
                 android:textColor="@color/black"
                 android:textSize="30dp"
                 android:textStyle="bold"
@@ -54,26 +54,10 @@
                 app:layout_constraintVertical_bias="0.071" />
 
             <TextView
-                android:id="@+id/errorRD"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Desired Dosage "
-                android:textColor="#ED1010"
-                android:textSize="30dp"
-                android:textStyle="bold"
-                android:visibility="gone"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.141"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.071" />
-
-            <TextView
                 android:id="@+id/textView4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Hand Dosage "
+                android:text="Stock Strength "
                 android:textColor="@color/black"
                 android:textSize="30dp"
                 android:textStyle="bold"
@@ -88,7 +72,7 @@
                 android:id="@+id/textView6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Hand Volume"
+                android:text="Stock Volume"
                 android:textColor="@color/black"
                 android:textSize="30dp"
                 android:textStyle="bold"
@@ -99,37 +83,6 @@
                 app:layout_constraintTop_toBottomOf="@+id/stockStrength"
                 app:layout_constraintVertical_bias="0.125" />
 
-            <TextView
-                android:id="@+id/errorSV"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Hand Volume"
-                android:textColor="#FF0000"
-                android:textSize="30dp"
-                android:visibility="gone"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.091"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/stockStrength"
-                app:layout_constraintVertical_bias="0.125" />
-
-            <TextView
-                android:id="@+id/errorSS"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Hand Dosage "
-                android:textColor="#FF0000"
-                android:textSize="30dp"
-                android:textStyle="bold"
-                android:visibility="gone"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.116"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/requiredDosage"
-                app:layout_constraintVertical_bias="0.085" />
 
             <TextView
                 android:id="@+id/textView5"

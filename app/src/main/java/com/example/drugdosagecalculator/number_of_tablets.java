@@ -19,7 +19,7 @@ public class number_of_tablets extends AppCompatActivity {
     Spinner unitRD,SS;
     EditText rd,ss;
     TextView dd,errorRD,tv1,tv2,errorSS;
-    Button calculate;
+    Button calculate,reset_btn;
     float result = 0;
 
     @Override
@@ -41,12 +41,15 @@ public class number_of_tablets extends AppCompatActivity {
         ss = findViewById(R.id.stockStrength);
         dd = findViewById(R.id.desiredDosage);
         calculate = findViewById(R.id.calculate);
+        reset_btn = findViewById(R.id.reset_btn);
 
-        errorRD = findViewById(R.id.errorRD);
-        errorSS = findViewById(R.id.errorSS);
+        errorRD = findViewById(R.id.requiredDosage_error);
+        errorSS = findViewById(R.id.stockStrength_error);
         tv1 = findViewById(R.id.textView3);
         tv2 = findViewById(R.id.textView4);
         Animation animShake = AnimationUtils.loadAnimation(number_of_tablets.this, R.anim.shake);
+
+
 
         calculate.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,7 +60,6 @@ public class number_of_tablets extends AppCompatActivity {
                 final String unitss = SS.getSelectedItem().toString().trim();
 
                 if(rdosage.isEmpty()){
-                    tv1.setVisibility(View.INVISIBLE);
                     errorRD.setVisibility(View.VISIBLE);
                     errorRD.startAnimation(animShake);
                     result = 0;
@@ -65,7 +67,6 @@ public class number_of_tablets extends AppCompatActivity {
                 }
 
                 if(ssdosage.isEmpty()){
-                    tv2.setVisibility(View.INVISIBLE);
                     errorSS.setVisibility(View.VISIBLE);
                     errorSS.startAnimation(animShake);
                     result = 0;
@@ -115,6 +116,22 @@ public class number_of_tablets extends AppCompatActivity {
 
             }
         });
+
+        reset_btn.setOnClickListener((new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(!rd.getText().toString().isEmpty()&& !ss.getText().toString().isEmpty()){
+                    rd.setText("");
+                    ss.setText("");
+                    dd.setText("");
+                    Toast.makeText(number_of_tablets.this, "All Cells are Reset", Toast.LENGTH_SHORT).show();
+                }
+                
+                else{
+                    Toast.makeText(number_of_tablets.this, "Nothing To Clear", Toast.LENGTH_SHORT).show();
+                }
+            }
+        }));
 
     }
 }

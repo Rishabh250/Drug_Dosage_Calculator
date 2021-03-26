@@ -46,9 +46,7 @@ public class volume_of_liquid extends AppCompatActivity {
         sv = findViewById(R.id.stockVolume);
         calculate = findViewById(R.id.calculate);
 
-        errorRD = findViewById(R.id.errorRD);
-        errorSS = findViewById(R.id.errorSS);
-        errorSV = findViewById(R.id.errorSV);
+        errorRD = findViewById(R.id.requiredDosage_error);
         tv1 = findViewById(R.id.textView3);
         tv2 = findViewById(R.id.textView4);
         tv3 = findViewById(R.id.textView6);
