@@ -13,6 +13,8 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.text.DecimalFormat;
+
 public class volume_of_liquid extends AppCompatActivity {
 
     Spinner unitRD,SS,SV;
@@ -53,6 +55,9 @@ public class volume_of_liquid extends AppCompatActivity {
         tv1 = findViewById(R.id.textView3);
         tv2 = findViewById(R.id.textView4);
         tv3 = findViewById(R.id.textView6);
+
+        DecimalFormat num = new DecimalFormat(".00");
+
         Animation animShake = AnimationUtils.loadAnimation(volume_of_liquid.this, R.anim.shake);
 
         calculate.setOnClickListener(new View.OnClickListener() {
@@ -68,21 +73,21 @@ public class volume_of_liquid extends AppCompatActivity {
                     errorRD.setVisibility(View.VISIBLE);
                     errorRD.startAnimation(animShake);
                     result = 0;
-                    dd.setText(result + " ml");
+                    dd.setText(num.format(result) + " ml");
                 }
 
                 if(ssdosage.isEmpty()){
                     errorSS.setVisibility(View.VISIBLE);
                     errorSS.startAnimation(animShake);
                     result = 0;
-                    dd.setText(result + " ml");
+                    dd.setText(num.format(result) + " ml");
                 }
 
                 if(svolume.isEmpty()){
                     errorSV.setVisibility(View.VISIBLE);
                     errorSV.startAnimation(animShake);
                     result = 0;
-                    dd.setText(result + " ml");
+                    dd.setText(num.format(result) + " ml");
                 }
 
                 if(unitrd == "Select Unit"){
@@ -118,7 +123,7 @@ public class volume_of_liquid extends AppCompatActivity {
                         result = (getRD/getSS)*getSV;
                     }
                 }
-                dd.setText(result + " ml");
+                dd.setText(num.format(result) + " ml");
 
                 if(result != 0){
                     errorRD.setVisibility(View.INVISIBLE);

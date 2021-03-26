@@ -14,6 +14,8 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.text.DecimalFormat;
+
 public class number_of_tablets extends AppCompatActivity {
 
     Spinner unitRD,SS;
@@ -47,6 +49,9 @@ public class number_of_tablets extends AppCompatActivity {
         errorSS = findViewById(R.id.stockStrength_error);
         tv1 = findViewById(R.id.textView3);
         tv2 = findViewById(R.id.textView4);
+
+        DecimalFormat num = new DecimalFormat(".00");
+
         Animation animShake = AnimationUtils.loadAnimation(number_of_tablets.this, R.anim.shake);
 
 
@@ -63,14 +68,14 @@ public class number_of_tablets extends AppCompatActivity {
                     errorRD.setVisibility(View.VISIBLE);
                     errorRD.startAnimation(animShake);
                     result = 0;
-                    dd.setText(result + " Tablet");
+                    dd.setText(num.format(result) + " Tablet");
                 }
 
                 if(ssdosage.isEmpty()){
                     errorSS.setVisibility(View.VISIBLE);
                     errorSS.startAnimation(animShake);
                     result = 0;
-                    dd.setText(result + " Tablet");
+                    dd.setText(num.format(result) + " Tablet");
                 }
 
                 if(unitrd == "Select Unit"){
@@ -105,7 +110,7 @@ public class number_of_tablets extends AppCompatActivity {
                         result = getRD/getSS;
                     }
                 }
-                dd.setText(result + " Tablets");
+                dd.setText(num.format(result) + " Tablet");
 
                 if(result != 0){
                     tv1.setVisibility(View.VISIBLE);
