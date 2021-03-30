@@ -6,4 +6,68 @@
     android:layout_height="match_parent"
     tools:context=".unit_conversion">
 
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="369dp"
+        android:layout_height="94dp"
+        android:gravity="center"
+        android:text="Unit Conversion"
+        android:textColor="@color/purple_200"
+        android:textSize="50dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.021" />
+
+    <Button
+        android:id="@+id/volume"
+        android:layout_width="165dp"
+        android:layout_height="81dp"
+        android:background="@drawable/click_button"
+        android:elevation="30dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Volume"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.065"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.347" />
+
+    <Button
+        android:id="@+id/mass"
+        android:layout_width="165dp"
+        android:layout_height="81dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/click_button"
+        android:elevation="30dp"
+        android:padding="4dp"
+        android:text="Mass"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.644"
+        app:layout_constraintStart_toEndOf="@+id/number_of_tablets"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.349" />
+
+    <Button
+        android:id="@+id/lenght"
+        android:layout_width="266dp"
+        android:layout_height="94dp"
+        android:background="@drawable/click_button"
+        android:elevation="30dp"
+        android:padding="4dp"
+        android:text="Length"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/volume"
+        app:layout_constraintVertical_bias="0.284" />
 </androidx.constraintlayout.widget.ConstraintLayout>
