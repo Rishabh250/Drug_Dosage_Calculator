@@ -22,7 +22,7 @@
         app:layout_constraintVertical_bias="0.021" />
 
     <Button
-        android:id="@+id/volume"
+        android:id="@+id/open_volume"
         android:layout_width="165dp"
         android:layout_height="81dp"
         android:background="@drawable/click_button"
@@ -39,7 +39,7 @@
         app:layout_constraintVertical_bias="0.347" />
 
     <Button
-        android:id="@+id/mass"
+        android:id="@+id/open_mass"
         android:layout_width="165dp"
         android:layout_height="81dp"
         android:layout_marginEnd="16dp"
@@ -56,7 +56,7 @@
         app:layout_constraintVertical_bias="0.349" />
 
     <Button
-        android:id="@+id/lenght"
+        android:id="@+id/open_lenght"
         android:layout_width="266dp"
         android:layout_height="94dp"
         android:background="@drawable/click_button"
@@ -68,6 +68,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/volume"
+        app:layout_constraintTop_toBottomOf="@+id/open_volume"
         app:layout_constraintVertical_bias="0.284" />
 </androidx.constraintlayout.widget.ConstraintLayout>

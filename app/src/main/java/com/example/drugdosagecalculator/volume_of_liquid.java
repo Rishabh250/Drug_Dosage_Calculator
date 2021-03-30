@@ -42,52 +42,54 @@ public class volume_of_liquid extends AppCompatActivity {
         ArrayAdapter<String> adapter01 = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, unit01);
         SS.setAdapter(adapter01);
 
-        rd = findViewById(R.id.requiredDosage);
-        ss = findViewById(R.id.stockStrength);
-        dd = findViewById(R.id.desiredDosage);
-        sv = findViewById(R.id.stockVolume);
+        rd = findViewById(R.id.VL_desiredDosage);
+        ss = findViewById(R.id.VL_handVolume);
+        dd = findViewById(R.id.VL_desiredVolume);
+        sv = findViewById(R.id.VL_handDosage);
         calculate = findViewById(R.id.calculate);
         reset_btn = findViewById(R.id.reset_btn);
 
-        errorRD = findViewById(R.id.requiredDosage_error);
-        errorSS = findViewById(R.id.stockStrength_error);
-        errorSV = findViewById(R.id.stockVolume_error);
+        errorRD = findViewById(R.id.VL_desiredDosage_error);
+        errorSS = findViewById(R.id.VL_handVolume_error);
+        errorSV = findViewById(R.id.VL_handDosage_error);
         tv1 = findViewById(R.id.textView3);
         tv2 = findViewById(R.id.textView4);
         tv3 = findViewById(R.id.textView6);
 
-        DecimalFormat num = new DecimalFormat(".00");
+        DecimalFormat num = new DecimalFormat("0.00");
 
         Animation animShake = AnimationUtils.loadAnimation(volume_of_liquid.this, R.anim.shake);
 
         calculate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String rdosage = rd.getText().toString().trim();
-                String ssdosage = ss.getText().toString().trim();
-                String svolume = sv.getText().toString().trim();
+                String desiredDosage = rd.getText().toString().trim();
+                String handVolume = ss.getText().toString().trim();
+                String desiredVolume = sv.getText().toString().trim();
                 final String unitrd = unitRD.getSelectedItem().toString().trim();
                 final String unitss = SS.getSelectedItem().toString().trim();
 
-                if(rdosage.isEmpty()){
-                    errorRD.setVisibility(View.VISIBLE);
-                    errorRD.startAnimation(animShake);
-                    result = 0;
-                    dd.setText(num.format(result) + " ml");
-                }
+                if(desiredDosage.isEmpty() || handVolume.isEmpty() || desiredVolume.isEmpty() ){
+                    if(desiredDosage.isEmpty()){
+                        errorRD.setVisibility(View.VISIBLE);
+                        errorRD.startAnimation(animShake);
+                        result = 0;
+                        dd.setText(num.format(result) + " ml");
+                    }
+                    if(handVolume.isEmpty()){
+                        errorSS.setVisibility(View.VISIBLE);
+                        errorSS.startAnimation(animShake);
+                        result = 0;
+                        dd.setText(num.format(result) + " ml");
+                    }
 
-                if(ssdosage.isEmpty()){
-                    errorSS.setVisibility(View.VISIBLE);
-                    errorSS.startAnimation(animShake);
-                    result = 0;
-                    dd.setText(num.format(result) + " ml");
-                }
-
-                if(svolume.isEmpty()){
-                    errorSV.setVisibility(View.VISIBLE);
-                    errorSV.startAnimation(animShake);
-                    result = 0;
-                    dd.setText(num.format(result) + " ml");
+                    if(desiredVolume.isEmpty()){
+                        errorSV.setVisibility(View.VISIBLE);
+                        errorSV.startAnimation(animShake);
+                        result = 0;
+                        dd.setText(num.format(result) + " ml");
+                    }
+                    return;
                 }
 
                 if(unitrd == "Select Unit"){
@@ -99,28 +101,28 @@ public class volume_of_liquid extends AppCompatActivity {
                     return;
                 }
 
-                if(unitrd != "Select Unit" && unitss != "Select Unit" && !rdosage.isEmpty() && !ssdosage.isEmpty() && !svolume.isEmpty()){
+                if(unitrd != "Select Unit" && unitss != "Select Unit" && !desiredDosage.isEmpty() && !handVolume.isEmpty() && !desiredVolume.isEmpty()){
 
-                    float getRD = Float.parseFloat(rdosage);
-                    float getSS = Float.parseFloat(ssdosage);
-                    float getSV = Float.parseFloat(svolume);
+                    float getDD = Float.parseFloat(desiredDosage);
+                    float getHD = Float.parseFloat(handVolume);
+                    float getHV = Float.parseFloat(desiredVolume);
 
                     if(unitrd == "g"){
-                        getRD = getRD * 1000;
+                        getDD = getDD * 1000;
                     }
                     if(unitrd == "mcg"){
-                        getRD = getRD / 1000;
+                        getDD = getDD / 1000;
                     }
 
                     if(unitss == "g"){
-                        getSS = getSS * 1000;
+                        getHD = getHD * 1000;
                     }
                     if(unitss == "mcg"){
-                        getSS = getSS / 1000;
+                        getHD = getHD / 1000;
                     }
 
                     if(unitrd != "" && unitss != ""){
-                        result = (getRD/getSS)*getSV;
+                        result = (getDD/getHD)*getHV;
                     }
                 }
                 dd.setText(num.format(result) + " ml");

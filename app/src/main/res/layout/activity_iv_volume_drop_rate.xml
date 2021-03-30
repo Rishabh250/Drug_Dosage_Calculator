@@ -45,7 +45,7 @@
                 android:id="@+id/textView3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Required Dosage "
+                android:text="Volume "
                 android:textColor="@color/black"
                 android:textSize="25dp"
                 android:textStyle="bold"
@@ -116,7 +116,7 @@
                 app:layout_constraintVertical_bias="0.075" />
 
             <EditText
-                android:id="@+id/requiredDosage"
+                android:id="@+id/DR_volume"
                 android:layout_width="127dp"
                 android:layout_height="50dp"
                 android:background="@drawable/edit_box_selector"
@@ -130,7 +130,7 @@
                 app:layout_constraintVertical_bias="0.083" />
 
             <TextView
-                android:id="@+id/requiredDosage_error"
+                android:id="@+id/DR_volume_error"
                 android:layout_width="127dp"
                 android:layout_height="50dp"
                 android:background="@drawable/edit_box_error"
@@ -144,7 +144,7 @@
                 app:layout_constraintVertical_bias="0.083" />
 
             <EditText
-                android:id="@+id/stockStrength"
+                android:id="@+id/DR_time"
                 android:layout_width="127dp"
                 android:layout_height="50dp"
                 android:background="@drawable/edit_box_selector"
@@ -154,11 +154,11 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.89"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tablets_unit"
+                app:layout_constraintTop_toBottomOf="@+id/DR_tablets_unit"
                 app:layout_constraintVertical_bias="0.049" />
 
             <TextView
-                android:id="@+id/stockStrength_error"
+                android:id="@+id/DR_time_error"
                 android:layout_width="127dp"
                 android:layout_height="50dp"
                 android:background="@drawable/edit_box_error"
@@ -168,11 +168,11 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.89"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tablets_unit"
+                app:layout_constraintTop_toBottomOf="@+id/DR_tablets_unit"
                 app:layout_constraintVertical_bias="0.049" />
 
             <EditText
-                android:id="@+id/stockVolume"
+                android:id="@+id/DR_dropFactor"
                 android:layout_width="127dp"
                 android:layout_height="50dp"
                 android:background="@drawable/edit_box_selector"
@@ -182,11 +182,11 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.89"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tablets_unit2"
+                app:layout_constraintTop_toBottomOf="@+id/DR_tablets_unit2"
                 app:layout_constraintVertical_bias="0.062" />
 
             <TextView
-                android:id="@+id/stockVolume_error"
+                android:id="@+id/DR_dropFactor_error"
                 android:layout_width="127dp"
                 android:layout_height="50dp"
                 android:background="@drawable/edit_box_error"
@@ -196,40 +196,40 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.89"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tablets_unit2"
+                app:layout_constraintTop_toBottomOf="@+id/DR_tablets_unit2"
                 app:layout_constraintVertical_bias="0.062" />
 
             <Spinner
-                android:id="@+id/tablets_unit"
+                android:id="@+id/DR_tablets_unit"
                 android:layout_width="142dp"
                 android:layout_height="44dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.94"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/requiredDosage"
+                app:layout_constraintTop_toBottomOf="@+id/DR_volume"
                 app:layout_constraintVertical_bias="0.0" />
 
             <Spinner
-                android:id="@+id/tablets_unit2"
+                android:id="@+id/DR_tablets_unit2"
                 android:layout_width="142dp"
                 android:layout_height="44dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.94"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/stockStrength"
+                app:layout_constraintTop_toBottomOf="@+id/DR_time"
                 app:layout_constraintVertical_bias="0.0" />
 
             <Spinner
-                android:id="@+id/tablets_unit3"
+                android:id="@+id/DR_tablets_unit3"
                 android:layout_width="142dp"
                 android:layout_height="44dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.94"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/stockVolume"
+                app:layout_constraintTop_toBottomOf="@+id/DR_dropFactor"
                 app:layout_constraintVertical_bias="0.0" />
 
             <Button

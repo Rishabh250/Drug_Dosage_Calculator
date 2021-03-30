@@ -102,7 +102,7 @@
                 app:layout_constraintVertical_bias="0.166" />
 
             <TextView
-                android:id="@+id/desiredDosage"
+                android:id="@+id/VL_desiredVolume"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
@@ -116,7 +116,7 @@
                 app:layout_constraintVertical_bias="0.075" />
 
             <EditText
-                android:id="@+id/requiredDosage"
+                android:id="@+id/VL_desiredDosage"
                 android:layout_width="127dp"
                 android:layout_height="50dp"
                 android:background="@drawable/edit_box_selector"
@@ -130,7 +130,7 @@
                 app:layout_constraintVertical_bias="0.083" />
 
             <TextView
-                android:id="@+id/requiredDosage_error"
+                android:id="@+id/VL_desiredDosage_error"
                 android:layout_width="127dp"
                 android:layout_height="50dp"
                 android:background="@drawable/edit_box_error"
@@ -144,7 +144,7 @@
                 app:layout_constraintVertical_bias="0.083" />
 
             <EditText
-                android:id="@+id/stockStrength"
+                android:id="@+id/VL_handVolume"
                 android:layout_width="127dp"
                 android:layout_height="50dp"
                 android:background="@drawable/edit_box_selector"
@@ -158,7 +158,7 @@
                 app:layout_constraintVertical_bias="0.049" />
 
             <TextView
-                android:id="@+id/stockStrength_error"
+                android:id="@+id/VL_handVolume_error"
                 android:layout_width="127dp"
                 android:layout_height="50dp"
                 android:background="@drawable/edit_box_error"
@@ -172,7 +172,7 @@
                 app:layout_constraintVertical_bias="0.049" />
 
             <EditText
-                android:id="@+id/stockVolume"
+                android:id="@+id/VL_handDosage"
                 android:layout_width="127dp"
                 android:layout_height="50dp"
                 android:background="@drawable/edit_box_selector"
@@ -186,7 +186,7 @@
                 app:layout_constraintVertical_bias="0.062" />
 
             <TextView
-                android:id="@+id/stockVolume_error"
+                android:id="@+id/VL_handDosage_error"
                 android:layout_width="127dp"
                 android:layout_height="50dp"
                 android:background="@drawable/edit_box_error"
@@ -207,7 +207,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.94"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/requiredDosage"
+                app:layout_constraintTop_toBottomOf="@+id/VL_desiredDosage"
                 app:layout_constraintVertical_bias="0.0" />
 
             <Spinner
@@ -218,7 +218,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.94"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/stockStrength"
+                app:layout_constraintTop_toBottomOf="@+id/VL_handVolume"
                 app:layout_constraintVertical_bias="0.0" />
 
             <Spinner
@@ -229,7 +229,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.94"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/stockVolume"
+                app:layout_constraintTop_toBottomOf="@+id/VL_handDosage"
                 app:layout_constraintVertical_bias="0.0" />
 
             <Button

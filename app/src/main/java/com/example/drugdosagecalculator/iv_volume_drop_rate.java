@@ -16,9 +16,9 @@ import android.widget.Toast;
 import java.text.DecimalFormat;
 
 public class iv_volume_drop_rate extends AppCompatActivity{
-        Spinner unitRD,SS,SV;
+        Spinner unit_volume,unit_time,unit_DropFactor;
         EditText rd,time,df;
-        TextView dd,errorRD,tv1,tv2,tv3,errorSS,errorSV;
+        TextView dd,errorRD,tv1,tv2,tv3,errorunit_time,errorunit_DropFactor;
         Button calculate,reset_btn;
         float result = 0;
 
@@ -28,36 +28,36 @@ public class iv_volume_drop_rate extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_iv_volume_drop_rate);
 
-            unitRD = findViewById(R.id.tablets_unit);
+            unit_volume = findViewById(R.id.DR_tablets_unit);
             String[] unit = new String[]{"ml"};
             ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, unit);
-            unitRD.setAdapter(adapter);
+            unit_volume.setAdapter(adapter);
 
-            SV = findViewById(R.id.tablets_unit3);
+            unit_DropFactor = findViewById(R.id.DR_tablets_unit3);
             String[] unit02 = new String[]{"drops/ml"};
             ArrayAdapter<String> adapter02 = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, unit02);
-            SV.setAdapter(adapter02);
+            unit_DropFactor.setAdapter(adapter02);
 
-            SS = findViewById(R.id.tablets_unit2);
+            unit_time = findViewById(R.id.DR_tablets_unit2);
             String[] unit01 = new String[]{"Select Time","min","hour"};
             ArrayAdapter<String> adapter01 = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, unit01);
-            SS.setAdapter(adapter01);
+            unit_time.setAdapter(adapter01);
 
-            rd = findViewById(R.id.requiredDosage);
-            time = findViewById(R.id.stockStrength);
+            rd = findViewById(R.id.DR_volume);
+            time = findViewById(R.id.DR_time);
             dd = findViewById(R.id.desiredDosage);
-            df = findViewById(R.id.stockVolume);
+            df = findViewById(R.id.DR_dropFactor);
             calculate = findViewById(R.id.calculate);
             reset_btn = findViewById(R.id.reset_btn);
 
-            errorRD = findViewById(R.id.requiredDosage_error);
-            errorSS = findViewById(R.id.stockStrength_error);
-            errorSV = findViewById(R.id.stockVolume_error);
+            errorRD = findViewById(R.id.DR_volume_error);
+            errorunit_time = findViewById(R.id.DR_time_error);
+            errorunit_DropFactor = findViewById(R.id.DR_dropFactor_error);
             tv1 = findViewById(R.id.textView3);
             tv2 = findViewById(R.id.textView4);
             tv3 = findViewById(R.id.textView6);
 
-            DecimalFormat num = new DecimalFormat(".00");
+            DecimalFormat num = new DecimalFormat("0.00");
 
             Animation animShake = AnimationUtils.loadAnimation(iv_volume_drop_rate.this, R.anim.shake);
 
@@ -67,31 +67,35 @@ public class iv_volume_drop_rate extends AppCompatActivity{
                 String rdosage = rd.getText().toString().trim();
                 String taketime = time.getText().toString().trim();
                 String getDF = df.getText().toString().trim();
-                final String unitTime = SS.getSelectedItem().toString().trim();
+                String unitTime = unit_time.getSelectedItem().toString().trim();
 
-                if(rdosage.isEmpty()){
-                    errorRD.setVisibility(View.VISIBLE);
-                    errorRD.startAnimation(animShake);
-                    result = 0;
-                    dd.setText(num.format(result) + " drop/min");
+
+                if(rdosage.isEmpty() || taketime.isEmpty() || getDF.isEmpty()){
+
+                    if(rdosage.isEmpty()){
+                        errorRD.setVisibility(View.VISIBLE);
+                        errorRD.startAnimation(animShake);
+                        result = 0;
+                        dd.setText(num.format(result) + " drop/min");
+                    }
+
+                    if(taketime.isEmpty()){
+                        errorunit_time.setVisibility(View.VISIBLE);
+                        errorunit_time.startAnimation(animShake);
+                        result = 0;
+                        dd.setText(num.format(result) + " drop/min");
+                    }
+                    if(getDF.isEmpty()){
+                        errorunit_DropFactor.setVisibility(View.VISIBLE);
+                        errorunit_DropFactor.startAnimation(animShake);
+                        result = 0;
+                        dd.setText(num.format(result) + " drop/min");
+                    }
+                    return;
                 }
 
-                if(taketime.isEmpty()){
-                    errorSS.setVisibility(View.VISIBLE);
-                    errorSS.startAnimation(animShake);
-                    result = 0;
-                    dd.setText(num.format(result) + " drop/min");
-                }
-
-                if(getDF.isEmpty()){
-                    errorSV.setVisibility(View.VISIBLE);
-                    errorSV.startAnimation(animShake);
-                    result = 0;
-                    dd.setText(num.format(result) + " drop/min");
-                }
-
-                if(unitTime == "Select Unit"){
-                    Toast.makeText(iv_volume_drop_rate.this, "Select Stock Strength Unit", Toast.LENGTH_SHORT).show();
+                if(unitTime == "Select Time"){
+                    Toast.makeText(iv_volume_drop_rate.this, "Select Time", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
@@ -112,8 +116,8 @@ public class iv_volume_drop_rate extends AppCompatActivity{
 
                 if(result != 0){
                     errorRD.setVisibility(View.INVISIBLE);
-                    errorSS.setVisibility(View.INVISIBLE);
-                    errorSV.setVisibility(View.INVISIBLE);
+                    errorunit_time.setVisibility(View.INVISIBLE);
+                    errorunit_DropFactor.setVisibility(View.INVISIBLE);
                 }
 
             }

@@ -50,7 +50,7 @@ public class number_of_tablets extends AppCompatActivity {
         tv1 = findViewById(R.id.textView3);
         tv2 = findViewById(R.id.textView4);
 
-        DecimalFormat num = new DecimalFormat(".00");
+        DecimalFormat num = new DecimalFormat("0.00");
 
         Animation animShake = AnimationUtils.loadAnimation(number_of_tablets.this, R.anim.shake);
 
@@ -64,19 +64,23 @@ public class number_of_tablets extends AppCompatActivity {
                 final String unitrd = unitRD.getSelectedItem().toString().trim();
                 final String unitss = SS.getSelectedItem().toString().trim();
 
-                if(rdosage.isEmpty()){
-                    errorRD.setVisibility(View.VISIBLE);
-                    errorRD.startAnimation(animShake);
-                    result = 0;
-                    dd.setText(num.format(result) + " Tablet");
+                if(rdosage.isEmpty() || ssdosage.isEmpty()) {
+                    if (rdosage.isEmpty()) {
+                        errorRD.setVisibility(View.VISIBLE);
+                        errorRD.startAnimation(animShake);
+                        result = 0;
+                        dd.setText(num.format(result) + " Tablet");
+                    }
+
+                    if (ssdosage.isEmpty()) {
+                        errorSS.setVisibility(View.VISIBLE);
+                        errorSS.startAnimation(animShake);
+                        result = 0;
+                        dd.setText(num.format(result) + " Tablet");
+                    }
+                    return;
                 }
 
-                if(ssdosage.isEmpty()){
-                    errorSS.setVisibility(View.VISIBLE);
-                    errorSS.startAnimation(animShake);
-                    result = 0;
-                    dd.setText(num.format(result) + " Tablet");
-                }
 
                 if(unitrd == "Select Unit"){
                     Toast.makeText(number_of_tablets.this, "Select Requried Dosage Unit", Toast.LENGTH_SHORT).show();
