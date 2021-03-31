@@ -233,9 +233,14 @@
 
             <Button
                 android:id="@+id/calculate"
-                android:layout_width="183dp"
-                android:layout_height="52dp"
+                android:layout_width="212dp"
+                android:layout_height="63dp"
+                android:background="@drawable/calculate_btn"
+                android:elevation="10dp"
                 android:text="Calculate"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

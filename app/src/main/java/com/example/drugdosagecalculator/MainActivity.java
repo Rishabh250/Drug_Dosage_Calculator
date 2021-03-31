@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.blogspot.atifsoftwares.animatoolib.Animatoo;
+
 public class MainActivity extends AppCompatActivity {
 
     Button tablets,vl,ivR,ivDrop,uc;
@@ -26,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this,number_of_tablets.class));
+                Animatoo.animateFade(MainActivity.this);
             }
         });
 
@@ -33,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this,volume_of_liquid.class));
+                Animatoo.animateFade(MainActivity.this);
             }
         });
 
@@ -40,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this,iv_volume_rate.class));
+                Animatoo.animateFade(MainActivity.this);
             }
         });
 
@@ -47,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this,iv_volume_drop_rate.class));
+                Animatoo.animateFade(MainActivity.this);
             }
         });
 
@@ -54,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this,unit_conversion.class));
+                Animatoo.animateFade(MainActivity.this);
             }
         });
     }

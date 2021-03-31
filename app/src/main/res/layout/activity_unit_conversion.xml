@@ -4,70 +4,99 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/topbar_bg"
     tools:context=".unit_conversion">
+
+    <ImageButton
+        android:id="@+id/imageButtonIN_UC"
+        android:layout_width="35dp"
+        android:layout_height="33dp"
+        android:background="@drawable/back"
+        app:layout_constraintBottom_toBottomOf="@+id/textView7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.042"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView7"
+        app:layout_constraintVertical_bias="0.206" />
 
     <TextView
         android:id="@+id/textView7"
-        android:layout_width="369dp"
-        android:layout_height="94dp"
+        android:layout_width="410dp"
+        android:layout_height="125dp"
         android:gravity="center"
-        android:text="Unit Conversion"
-        android:textColor="@color/purple_200"
+        android:text="Unit \nConversion"
+        android:textColor="@color/white"
         android:textSize="50dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.021" />
+        app:layout_constraintVertical_bias="0.022" />
 
-    <Button
-        android:id="@+id/open_volume"
-        android:layout_width="165dp"
-        android:layout_height="81dp"
-        android:background="@drawable/click_button"
-        android:elevation="30dp"
-        android:gravity="center"
-        android:padding="10dp"
-        android:text="Volume"
-        android:textSize="20dp"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/homepage_bg"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.065"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.347" />
+        app:layout_constraintTop_toBottomOf="@+id/textView7"
+        app:layout_constraintVertical_bias="0.0">
 
-    <Button
-        android:id="@+id/open_mass"
-        android:layout_width="165dp"
-        android:layout_height="81dp"
-        android:layout_marginEnd="16dp"
-        android:background="@drawable/click_button"
-        android:elevation="30dp"
-        android:padding="4dp"
-        android:text="Mass"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.644"
-        app:layout_constraintStart_toEndOf="@+id/number_of_tablets"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.349" />
+        <Button
+            android:id="@+id/open_volume"
+            android:layout_width="165dp"
+            android:layout_height="81dp"
+            android:background="@drawable/click_button"
+            android:elevation="30dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Volume"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.065"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.347" />
 
-    <Button
-        android:id="@+id/open_lenght"
-        android:layout_width="266dp"
-        android:layout_height="94dp"
-        android:background="@drawable/click_button"
-        android:elevation="30dp"
-        android:padding="4dp"
-        android:text="Length"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/open_volume"
-        app:layout_constraintVertical_bias="0.284" />
+        <Button
+            android:id="@+id/open_mass"
+            android:layout_width="165dp"
+            android:layout_height="81dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/click_button"
+            android:elevation="30dp"
+            android:padding="4dp"
+            android:text="Mass"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.644"
+            app:layout_constraintStart_toEndOf="@+id/number_of_tablets"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.349" />
+
+        <Button
+            android:id="@+id/open_lenght"
+            android:layout_width="266dp"
+            android:layout_height="94dp"
+            android:background="@drawable/click_button"
+            android:elevation="30dp"
+            android:padding="4dp"
+            android:text="Length"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/open_volume"
+            app:layout_constraintVertical_bias="0.284" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

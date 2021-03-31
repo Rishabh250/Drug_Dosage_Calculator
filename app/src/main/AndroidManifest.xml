@@ -9,15 +9,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".unitconversion.Length_converter"></activity>
-        <activity android:name=".unitconversion.Mass_Converter" />
-        <activity android:name=".unitconversion.Volume_Converter" />
-        <activity android:name=".unit_conversion" />
-        <activity android:name=".iv_volume_drop_rate" />
-        <activity android:name=".iv_volume_rate" />
-        <activity android:name=".volume_of_liquid" />
-        <activity android:name=".number_of_tablets" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".unitconversion.Length_converter"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".unitconversion.Mass_Converter"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".unitconversion.Volume_Converter"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".unit_conversion"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".iv_volume_drop_rate"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".iv_volume_rate"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".volume_of_liquid"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".number_of_tablets"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
