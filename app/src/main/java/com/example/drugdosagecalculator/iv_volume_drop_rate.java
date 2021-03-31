@@ -76,20 +76,20 @@ public class iv_volume_drop_rate extends AppCompatActivity{
                         errorRD.setVisibility(View.VISIBLE);
                         errorRD.startAnimation(animShake);
                         result = 0;
-                        dd.setText(num.format(result) + " drop/min");
+                        dd.setText(num.format(result) + " drops/min");
                     }
 
                     if(taketime.isEmpty()){
                         errorunit_time.setVisibility(View.VISIBLE);
                         errorunit_time.startAnimation(animShake);
                         result = 0;
-                        dd.setText(num.format(result) + " drop/min");
+                        dd.setText(num.format(result) + " drops/min");
                     }
                     if(getDF.isEmpty()){
                         errorunit_DropFactor.setVisibility(View.VISIBLE);
                         errorunit_DropFactor.startAnimation(animShake);
                         result = 0;
-                        dd.setText(num.format(result) + " drop/min");
+                        dd.setText(num.format(result) + " drops/min");
                     }
                     return;
                 }
@@ -112,7 +112,7 @@ public class iv_volume_drop_rate extends AppCompatActivity{
                         result = (getRD*getDrop)/getTime;
                     }
                 }
-                dd.setText(num.format(result) + " drop/min");
+                dd.setText(num.format(result) + " drops/min");
 
                 if(result != 0){
                     errorRD.setVisibility(View.INVISIBLE);

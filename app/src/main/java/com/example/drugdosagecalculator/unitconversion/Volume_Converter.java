@@ -35,7 +35,7 @@ public class Volume_Converter extends AppCompatActivity {
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, unit);
         unitLiter.setAdapter(adapter);
 
-        getLiter = findViewById(R.id.lenght);
+        getLiter = findViewById(R.id.volume);
 
         resultML = findViewById(R.id.desiredDosage);
 
