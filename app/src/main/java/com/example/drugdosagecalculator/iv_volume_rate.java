@@ -2,6 +2,7 @@ package com.example.drugdosagecalculator;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
@@ -9,9 +10,12 @@ import android.view.animation.AnimationUtils;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.blogspot.atifsoftwares.animatoolib.Animatoo;
 
 import java.text.DecimalFormat;
 
@@ -22,6 +26,7 @@ public class iv_volume_rate extends AppCompatActivity {
     TextView dd,errorRD,tv1,tv2,errortime;
     Button calculate,reset_btn;
     float result = 0;
+    ImageView back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +53,8 @@ public class iv_volume_rate extends AppCompatActivity {
         errortime = findViewById(R.id.VR_Time_error);
         tv1 = findViewById(R.id.textView3);
         tv2 = findViewById(R.id.textView4);
+
+        back = findViewById(R.id.back_btn_vr);
 
         DecimalFormat num = new DecimalFormat("0.00");
 
@@ -123,6 +130,14 @@ public class iv_volume_rate extends AppCompatActivity {
                 }
             }
         }));
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(iv_volume_rate.this,MainActivity.class));
+                Animatoo.animateFade(iv_volume_rate.this);
+            }
+        });
 
     }
 }

@@ -2,6 +2,7 @@ package com.example.drugdosagecalculator;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
@@ -9,9 +10,12 @@ import android.view.animation.AnimationUtils;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.blogspot.atifsoftwares.animatoolib.Animatoo;
 
 import java.text.DecimalFormat;
 
@@ -21,6 +25,7 @@ public class iv_volume_drop_rate extends AppCompatActivity{
         TextView dd,errorRD,tv1,tv2,tv3,errorunit_time,errorunit_DropFactor;
         Button calculate,reset_btn;
         float result = 0;
+        ImageView back;
 
         @Override
 
@@ -57,6 +62,7 @@ public class iv_volume_drop_rate extends AppCompatActivity{
             tv2 = findViewById(R.id.textView4);
             tv3 = findViewById(R.id.textView6);
 
+            back = findViewById(R.id.back_btn_vdr);
             DecimalFormat num = new DecimalFormat("0.00");
 
             Animation animShake = AnimationUtils.loadAnimation(iv_volume_drop_rate.this, R.anim.shake);
@@ -139,6 +145,14 @@ public class iv_volume_drop_rate extends AppCompatActivity{
                 }
             }
         }));
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(iv_volume_drop_rate.this,MainActivity.class));
+                Animatoo.animateFade(iv_volume_drop_rate.this);
+                }
+            });
 
     }
     }
