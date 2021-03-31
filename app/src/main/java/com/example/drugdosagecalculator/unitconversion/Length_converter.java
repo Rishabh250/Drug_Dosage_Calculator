@@ -70,6 +70,7 @@ public class Length_converter extends AppCompatActivity {
                     errorLength.startAnimation(animShake);
                     result = 0;
                     resultLength.setText(num.format(result) +" " + UNITresultLength);
+                    return;
                 }
 
                 if(UNITlength == "Select Unit"){

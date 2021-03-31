@@ -79,10 +79,9 @@
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.122"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/calculate"
-                app:layout_constraintVertical_bias="0.185" />
+                app:layout_constraintVertical_bias="0.196" />
 
             <TextView
                 android:id="@+id/desiredDosage"
@@ -93,10 +92,10 @@
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.105"
+                app:layout_constraintHorizontal_bias="0.498"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView5"
-                app:layout_constraintVertical_bias="0.075" />
+                app:layout_constraintVertical_bias="0.216" />
 
             <EditText
                 android:id="@+id/requiredDosage"
@@ -184,10 +183,9 @@
                 android:text="Calculate"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.557"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tablets_unit2"
-                app:layout_constraintVertical_bias="0.112" />
+                app:layout_constraintVertical_bias="0.108" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

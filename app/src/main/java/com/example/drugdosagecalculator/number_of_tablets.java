@@ -23,6 +23,7 @@ public class number_of_tablets extends AppCompatActivity {
     TextView dd,errorRD,tv1,tv2,errorSS;
     Button calculate,reset_btn;
     float result = 0;
+    String text;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -113,8 +114,15 @@ public class number_of_tablets extends AppCompatActivity {
                     if(unitrd != "" && unitss != ""){
                         result = getRD/getSS;
                     }
+
+                    if(result > 1){
+                        text = "Tablets";
+                    }
+                    else{
+                        text = "Tablet";
+                    }
                 }
-                dd.setText(num.format(result) + " Tablet");
+                dd.setText(num.format(result) + " "+ text);
 
                 if(result != 0){
                     tv1.setVisibility(View.VISIBLE);

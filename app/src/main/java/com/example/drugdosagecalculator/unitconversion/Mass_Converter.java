@@ -52,8 +52,10 @@ public class Mass_Converter extends AppCompatActivity {
         tv2 = findViewById(R.id.textView4);
         tv3 = findViewById(R.id.textView6);
 
-        DecimalFormat num = new DecimalFormat("0.0000000000");
-
+        DecimalFormat num3 = new DecimalFormat("0.00");
+        DecimalFormat num4 = new DecimalFormat("0.0000");
+        DecimalFormat num = new DecimalFormat("0.000000");
+        DecimalFormat num2 = new DecimalFormat("0.####E0");
         Animation animShake = AnimationUtils.loadAnimation(Mass_Converter.this, R.anim.shake);
 
         calculate.setOnClickListener((new View.OnClickListener() {
@@ -69,7 +71,8 @@ public class Mass_Converter extends AppCompatActivity {
                     errorWeight.setVisibility(View.VISIBLE);
                     errorWeight.startAnimation(animShake);
                     result = 0;
-                    resultWeight.setText(num.format(result) +" " + UNITRESULTweight);
+                    resultWeight.setText(num3.format(result)+ " "+UNITRESULTweight );
+                    return;
                 }
 
                 if(UNITweight == "Select Unit"){
@@ -85,92 +88,115 @@ public class Mass_Converter extends AppCompatActivity {
                     if(UNITweight == "kg"){
                         if(UNITRESULTweight == "kg"){
                             result = getWeight * 1;
+                            resultWeight.setText(num3.format(result) +" " + UNITRESULTweight);
                         }
                         if(UNITRESULTweight == "g"){
                             result = getWeight * 1000;
+                            resultWeight.setText(num3.format(result) +" " + UNITRESULTweight);
                         }
                         if(UNITRESULTweight == "mg"){
                             result = getWeight * 1000000;
+                            resultWeight.setText(num2.format(result) +" " + UNITRESULTweight);
                         }
                         if(UNITRESULTweight == "mcg"){
                             result = getWeight * 1000000000 ;
+                            resultWeight.setText(num2.format(result) +" " + UNITRESULTweight);
                         }
                         if(UNITRESULTweight == "Lbs"){
                             result = (float) (getWeight * 2.205);
+                            resultWeight.setText(num3.format(result) +" " + UNITRESULTweight);
                         }
                     }
                     if(UNITweight == "g"){
                         if(UNITRESULTweight == "g"){
                             result = getWeight * 1;
+                            resultWeight.setText(num3.format(result) +" " + UNITRESULTweight);
                         }
                         if(UNITRESULTweight == "kg"){
                             result = getWeight / 1000;
+                            resultWeight.setText(num4.format(result) +" " + UNITRESULTweight);
                         }
                         if(UNITRESULTweight == "mg"){
                             result = getWeight * 1000;
+                            resultWeight.setText(num3.format(result) +" " + UNITRESULTweight);
                         }
                         if(UNITRESULTweight == "mcg"){
                             result = getWeight * 1000000 ;
+                            resultWeight.setText(num2.format(result) +" " + UNITRESULTweight);
                         }
                         if(UNITRESULTweight == "Lbs"){
                             result = (float) (getWeight / 454);
+                            resultWeight.setText(num.format(result) +" " + UNITRESULTweight);
                         }
                     }
 
                     if(UNITweight == "mg"){
                         if(UNITRESULTweight == "mg"){
                             result = getWeight * 1;
+                            resultWeight.setText(num3.format(result) +" " + UNITRESULTweight);
                         }
                         if(UNITRESULTweight == "kg"){
                             result = getWeight / 1000000;
+                            resultWeight.setText(num2.format(result) +" " + UNITRESULTweight);
                         }
                         if(UNITRESULTweight == "g"){
                             result = getWeight / 1000;
+                            resultWeight.setText(num4.format(result) +" " + UNITRESULTweight);
                         }
                         if(UNITRESULTweight == "mcg"){
                             result = getWeight * 1000 ;
+                            resultWeight.setText(num3.format(result) +" " + UNITRESULTweight);
                         }
                         if(UNITRESULTweight == "Lbs"){
                             result = (float) (getWeight / 453592);
+                            resultWeight.setText(num2.format(result) +" " + UNITRESULTweight);
                         }
                     }
                     if(UNITweight == "mcg"){
                         if(UNITRESULTweight == "mcg"){
                             result = getWeight * 1;
+                            resultWeight.setText(num3.format(result) +" " + UNITRESULTweight);
                         }
                         if(UNITRESULTweight == "kg"){
                             result = getWeight / 1000000000;
+                            resultWeight.setText(num2.format(result) +" " + UNITRESULTweight);
                         }
                         if(UNITRESULTweight == "g"){
                             result = getWeight / 1000000;
+                            resultWeight.setText(num2.format(result) +" " + UNITRESULTweight);
                         }
                         if(UNITRESULTweight == "mg"){
                             result = getWeight / 1000 ;
+                            resultWeight.setText(num4.format(result) +" " + UNITRESULTweight);
                         }
                         if(UNITRESULTweight == "Lbs"){
                             result = (float) (getWeight / 453592370 );
+                            resultWeight.setText(num2.format(result) +" " + UNITRESULTweight);
                         }
                     }
                     if(UNITweight == "Lbs"){
                         if(UNITRESULTweight == "Lbs"){
                             result = getWeight * 1;
+                            resultWeight.setText(num3.format(result) +" " + UNITRESULTweight);
                         }
                         if(UNITRESULTweight == "kg"){
                             result = (float) (getWeight / 2.205);
+                            resultWeight.setText(num4.format(result) +" " + UNITRESULTweight);
                         }
                         if(UNITRESULTweight == "g"){
-                            result = getWeight / 454;
+                            result = getWeight * 454;
+                            resultWeight.setText(num3.format(result) +" " + UNITRESULTweight);
                         }
                         if(UNITRESULTweight == "mg"){
-                            result = getWeight / 453592 ;
+                            result = getWeight * 453592 ;
+                            resultWeight.setText(num3.format(result) +" " + UNITRESULTweight);
                         }
                         if(UNITRESULTweight == "mcg"){
-                            result = (float) (getWeight / 453592370 );
+                            result = (float) (getWeight * 453592370 );
+                            resultWeight.setText(num2.format(result) +" " + UNITRESULTweight);
                         }
                     }
                 }
-                resultWeight.setText(num.format(result) +" " + UNITRESULTweight);
-
                 if(result != 0){
                     errorWeight.setVisibility(View.INVISIBLE);
                 }

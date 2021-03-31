@@ -67,14 +67,14 @@ public class iv_volume_rate extends AppCompatActivity {
                         errorRD.setVisibility(View.VISIBLE);
                         errorRD.startAnimation(animShake);
                         result = 0;
-                        dd.setText(num.format(result) + " Tablet");
+                        dd.setText(num.format(result) + " ml/hour");
                     }
 
                     if (timedosage.isEmpty()) {
                         errortime.setVisibility(View.VISIBLE);
                         errortime.startAnimation(animShake);
                         result = 0;
-                        dd.setText(num.format(result) + " Tablet");
+                        dd.setText(num.format(result) + " ml/hour");
                     }
                     return;
                 }
@@ -97,7 +97,7 @@ public class iv_volume_rate extends AppCompatActivity {
                         result = getRD/getTime;
                     }
                 }
-                dd.setText(num.format(result) + " Tablet");
+                dd.setText(num.format(result) + " ml/hour");
                 if(result != 0){
                     tv1.setVisibility(View.VISIBLE);
                     tv2.setVisibility(View.VISIBLE);
