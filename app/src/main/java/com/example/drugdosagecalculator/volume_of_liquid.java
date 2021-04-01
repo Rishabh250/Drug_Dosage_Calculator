@@ -2,6 +2,7 @@ package com.example.drugdosagecalculator;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
@@ -9,9 +10,12 @@ import android.view.animation.AnimationUtils;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.blogspot.atifsoftwares.animatoolib.Animatoo;
 
 import java.text.DecimalFormat;
 
@@ -22,6 +26,7 @@ public class volume_of_liquid extends AppCompatActivity {
     TextView dd,errorRD,tv1,tv2,tv3,errorSS,errorSV;
     Button calculate,reset_btn;
     float result = 0;
+    ImageView back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,7 +61,9 @@ public class volume_of_liquid extends AppCompatActivity {
         tv2 = findViewById(R.id.textView4);
         tv3 = findViewById(R.id.textView6);
 
-        DecimalFormat num = new DecimalFormat("0.00");
+        back = findViewById(R.id.back_btn_VL);
+
+        DecimalFormat num = new DecimalFormat("0.0");
 
         Animation animShake = AnimationUtils.loadAnimation(volume_of_liquid.this, R.anim.shake);
 
@@ -152,6 +159,15 @@ public class volume_of_liquid extends AppCompatActivity {
                 }
             }
         }));
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(volume_of_liquid.this,MainActivity.class));
+                Animatoo.animateFade(volume_of_liquid.this);
+                finish();
+            }
+        });
 
     }
 }

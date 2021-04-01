@@ -2,6 +2,7 @@ package com.example.drugdosagecalculator.unitconversion;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
@@ -9,11 +10,16 @@ import android.view.animation.AnimationUtils;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.blogspot.atifsoftwares.animatoolib.Animatoo;
+import com.example.drugdosagecalculator.MainActivity;
 import com.example.drugdosagecalculator.R;
+import com.example.drugdosagecalculator.number_of_tablets;
+import com.example.drugdosagecalculator.unit_conversion;
 
 import java.text.DecimalFormat;
 
@@ -24,6 +30,7 @@ public class Length_converter extends AppCompatActivity {
     TextView resultLength,errorLength,tv1,tv2,tv3;
     Button calculate,reset_btn;
     float result = 0;
+    ImageView back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +58,8 @@ public class Length_converter extends AppCompatActivity {
         tv1 = findViewById(R.id.textView3);
         tv2 = findViewById(R.id.textView4);
         tv3 = findViewById(R.id.textView6);
+
+        back = findViewById(R.id.back_btn_LC);
 
         DecimalFormat num = new DecimalFormat("0.00");
 
@@ -139,6 +148,14 @@ public class Length_converter extends AppCompatActivity {
                 }
             }
         }));
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Length_converter.this, unit_conversion.class));
+                Animatoo.animateFade(Length_converter.this);
+                finish();
+            }
+        });
 
     }
 }

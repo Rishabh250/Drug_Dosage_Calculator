@@ -33,6 +33,7 @@ public class unit_conversion extends AppCompatActivity {
             public void onClick(View v) {
                 startActivity(new Intent(unit_conversion.this, Volume_Converter.class));
                 Animatoo.animateFade(unit_conversion.this);
+                finish();
             }
         });
 
@@ -41,6 +42,7 @@ public class unit_conversion extends AppCompatActivity {
             public void onClick(View v) {
                 startActivity(new Intent(unit_conversion.this, Mass_Converter.class));
                 Animatoo.animateFade(unit_conversion.this);
+                finish();
             }
         });
 
@@ -49,6 +51,7 @@ public class unit_conversion extends AppCompatActivity {
             public void onClick(View v) {
                 startActivity(new Intent(unit_conversion.this, Length_converter.class));
                 Animatoo.animateFade(unit_conversion.this);
+                finish();
             }
         });
         back.setOnClickListener(new View.OnClickListener() {
@@ -56,6 +59,7 @@ public class unit_conversion extends AppCompatActivity {
             public void onClick(View v) {
                 startActivity(new Intent(unit_conversion.this,MainActivity.class));
                 Animatoo.animateFade(unit_conversion.this);
+                finish();
             }
         });
 

@@ -2,6 +2,7 @@ package com.example.drugdosagecalculator.unitconversion;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
@@ -9,11 +10,16 @@ import android.view.animation.AnimationUtils;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.blogspot.atifsoftwares.animatoolib.Animatoo;
+import com.example.drugdosagecalculator.MainActivity;
 import com.example.drugdosagecalculator.R;
+import com.example.drugdosagecalculator.number_of_tablets;
+import com.example.drugdosagecalculator.unit_conversion;
 
 import java.text.DecimalFormat;
 
@@ -24,6 +30,7 @@ public class Mass_Converter extends AppCompatActivity {
     TextView resultWeight,errorWeight,tv1,tv2,tv3;
     Button calculate,reset_btn;
     float result = 0;
+    ImageView back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +58,8 @@ public class Mass_Converter extends AppCompatActivity {
         tv1 = findViewById(R.id.textView3);
         tv2 = findViewById(R.id.textView4);
         tv3 = findViewById(R.id.textView6);
+
+        back = findViewById(R.id.back_btn_mass);
 
         DecimalFormat num3 = new DecimalFormat("0.00");
         DecimalFormat num4 = new DecimalFormat("0.0000");
@@ -217,6 +226,14 @@ public class Mass_Converter extends AppCompatActivity {
                 }
             }
         }));
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Mass_Converter.this,unit_conversion.class));
+                Animatoo.animateFade(Mass_Converter.this);
+                finish();
+            }
+        });
 
     }
 }

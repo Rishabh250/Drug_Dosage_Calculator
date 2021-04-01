@@ -2,6 +2,7 @@ package com.example.drugdosagecalculator;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -10,9 +11,12 @@ import android.view.animation.AnimationUtils;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.blogspot.atifsoftwares.animatoolib.Animatoo;
 
 import java.text.DecimalFormat;
 
@@ -24,6 +28,7 @@ public class number_of_tablets extends AppCompatActivity {
     Button calculate,reset_btn;
     float result = 0;
     String text;
+    ImageView back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,8 +55,10 @@ public class number_of_tablets extends AppCompatActivity {
         errorSS = findViewById(R.id.stockStrength_error);
         tv1 = findViewById(R.id.textView3);
         tv2 = findViewById(R.id.textView4);
+        back = findViewById(R.id.back_btn_NT);
 
-        DecimalFormat num = new DecimalFormat("0.00");
+
+        DecimalFormat num = new DecimalFormat("0.0");
 
         Animation animShake = AnimationUtils.loadAnimation(number_of_tablets.this, R.anim.shake);
 
@@ -149,6 +156,15 @@ public class number_of_tablets extends AppCompatActivity {
                 }
             }
         }));
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(number_of_tablets.this,MainActivity.class));
+                Animatoo.animateFade(number_of_tablets.this);
+                finish();
+            }
+        });
 
     }
 }

@@ -34,7 +34,7 @@ public class iv_volume_rate extends AppCompatActivity {
         setContentView(R.layout.activity_iv_volume_rate);
 
         unitRD = findViewById(R.id.tablets_unit);
-        String[] unit = new String[]{"ml"};
+        String[] unit = new String[]{"ml","l"};
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, unit);
         unitRD.setAdapter(adapter);
 
@@ -56,7 +56,7 @@ public class iv_volume_rate extends AppCompatActivity {
 
         back = findViewById(R.id.back_btn_vr);
 
-        DecimalFormat num = new DecimalFormat("0.00");
+        DecimalFormat num = new DecimalFormat("0.0");
 
         Animation animShake = AnimationUtils.loadAnimation(iv_volume_rate.this, R.anim.shake);
 
@@ -100,6 +100,10 @@ public class iv_volume_rate extends AppCompatActivity {
                         ;
                     }
 
+                    if(unitrd == "l"){
+                        getRD = getRD * 1000;
+                    }
+
                     if(unitrd != "" && unitunitTime != ""){
                         result = getRD/getTime;
                     }
@@ -136,6 +140,7 @@ public class iv_volume_rate extends AppCompatActivity {
             public void onClick(View v) {
                 startActivity(new Intent(iv_volume_rate.this,MainActivity.class));
                 Animatoo.animateFade(iv_volume_rate.this);
+                finish();
             }
         });
 

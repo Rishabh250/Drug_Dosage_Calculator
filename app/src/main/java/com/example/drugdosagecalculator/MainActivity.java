@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this,number_of_tablets.class));
                 Animatoo.animateFade(MainActivity.this);
+                finish();
             }
         });
 
@@ -37,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this,volume_of_liquid.class));
                 Animatoo.animateFade(MainActivity.this);
+                finish();
             }
         });
 
@@ -45,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this,iv_volume_rate.class));
                 Animatoo.animateFade(MainActivity.this);
+                finish();
             }
         });
 
@@ -53,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this,iv_volume_drop_rate.class));
                 Animatoo.animateFade(MainActivity.this);
+                finish();
             }
         });
 
@@ -61,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this,unit_conversion.class));
                 Animatoo.animateFade(MainActivity.this);
+                finish();
             }
         });
     }
