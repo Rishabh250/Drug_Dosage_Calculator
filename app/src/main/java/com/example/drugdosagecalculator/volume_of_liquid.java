@@ -63,7 +63,7 @@ public class volume_of_liquid extends AppCompatActivity {
 
         back = findViewById(R.id.back_btn_VL);
 
-        DecimalFormat num = new DecimalFormat("0.0");
+        DecimalFormat num = new DecimalFormat("0.00");
 
         Animation animShake = AnimationUtils.loadAnimation(volume_of_liquid.this, R.anim.shake);
 

@@ -58,7 +58,7 @@ public class number_of_tablets extends AppCompatActivity {
         back = findViewById(R.id.back_btn_NT);
 
 
-        DecimalFormat num = new DecimalFormat("0.0");
+        DecimalFormat num = new DecimalFormat("0.00");
 
         Animation animShake = AnimationUtils.loadAnimation(number_of_tablets.this, R.anim.shake);
 

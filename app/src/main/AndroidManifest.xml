@@ -9,23 +9,43 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".unitconversion.Length_converter"
-            android:screenOrientation="portrait"></activity>
-        <activity android:name=".unitconversion.Mass_Converter"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".unitconversion.Volume_Converter"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".unit_conversion"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".iv_volume_drop_rate"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".iv_volume_rate"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".volume_of_liquid"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".number_of_tablets"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".MainActivity"
+        <activity android:name=".Formula_And_Examples"></activity>
+        <activity android:name=".formula_examples.example_for_UC" />
+        <activity android:name=".formula_examples.example_forivdr" />
+        <activity android:name=".formula_examples.example_for_VR" />
+        <activity android:name=".formula_examples.example_for_VL" />
+        <activity android:name=".formula_examples.example_for_NT" />
+        <activity android:name=".formula.Unit_Conversion" />
+        <activity android:name=".formula.IV_drop_rate" />
+        <activity android:name=".formula.IV_Volume_Rate" />
+        <activity android:name=".formula.Volume_of_Liquid" />
+        <activity android:name=".formula.Number_of_Tablet" />
+        <activity
+            android:name=".unitconversion.Length_converter"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".unitconversion.Mass_Converter"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".unitconversion.Volume_Converter"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".unit_conversion"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".iv_volume_drop_rate"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".iv_volume_rate"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".volume_of_liquid"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".number_of_tablets"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

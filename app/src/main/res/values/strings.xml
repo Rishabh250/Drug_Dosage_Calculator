@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">Drug Dosage Calculator</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="title_activity_scrolling">ScrollingActivity</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title_activity_fullscreen">FullscreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="_1_kilogram_kg_1000_gram_g_n_1_gram_g_1000_milligrams_mg_n_1_milligrams_mg_1000_mcg_n_1_microgram_mcg_1000_nanogram_ng">▪ 1 kilogram(kg) = 1000 gram(g)\n▪ 1 gram(g) = 1000 milligrams(mg)\n▪ 1 milligrams(mg) = 1000 mcg\n▪ 1 microgram(mcg) = 1000 nanogram(ng)</string>
+    <string name="_1_liter_l_1000_milliliters_ml_n_1_pint_500_milliliters_ml_n_1_ounce_30_milliliters_ml_n_1_milliliter_15_macro_drops_or_60_micro_t_tdrops_n_1_macro_drop_4_micro_drops">▪ 1 liter (L) = 1000 milliliters(ml)\n▪ 1 pint = 500 milliliters (mL)\n▪ 1 ounce = 30 milliliters (mL)\n▪ 1 milliliter = 15 macro drops or 60 micro drops\n▪ 1 macro drop = 4 micro drops</string>
 </resources>

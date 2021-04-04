@@ -63,7 +63,7 @@ public class iv_volume_drop_rate extends AppCompatActivity{
             tv3 = findViewById(R.id.textView6);
 
             back = findViewById(R.id.back_btn_vdr);
-            DecimalFormat num = new DecimalFormat("0.0");
+            DecimalFormat num = new DecimalFormat("0.00");
 
             Animation animShake = AnimationUtils.loadAnimation(iv_volume_drop_rate.this, R.anim.shake);
 
@@ -149,7 +149,7 @@ public class iv_volume_drop_rate extends AppCompatActivity{
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(iv_volume_drop_rate.this,MainActivity.class));
+                startActivity(new Intent(iv_volume_drop_rate.this, MainActivity.class));
                 Animatoo.animateFade(iv_volume_drop_rate.this);
                 finish();
                 }

@@ -56,7 +56,7 @@ public class iv_volume_rate extends AppCompatActivity {
 
         back = findViewById(R.id.back_btn_vr);
 
-        DecimalFormat num = new DecimalFormat("0.0");
+        DecimalFormat num = new DecimalFormat("0.00");
 
         Animation animShake = AnimationUtils.loadAnimation(iv_volume_rate.this, R.anim.shake);
 

@@ -61,7 +61,7 @@ public class Volume_Converter extends AppCompatActivity {
         tv3 = findViewById(R.id.textView6);
 
         back = findViewById(R.id.back_btn_VC);
-        DecimalFormat num = new DecimalFormat("0.0");
+        DecimalFormat num = new DecimalFormat("0.00");
         DecimalFormat num2= new DecimalFormat("0.000");
 
         Animation animShake = AnimationUtils.loadAnimation(Volume_Converter.this, R.anim.shake);
